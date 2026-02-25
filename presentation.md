@@ -116,10 +116,42 @@ footer {
 ---
 <!-- header: "![w:80](./small-logo.png) Configuring ArchivesSpace​​" -->
 
-- xsl pdf overrides​
-- locales changes​
-- Pui logo changes​
-- Favicon changes​
+- Change text with locales
+- Change the logo
+
+---
+<!-- header: "![w:80](./small-logo.png) Change UI text with locales" -->
+
+- Locales are exposed in the `locales` directory
+- Edit `locales/public/en.yml`
+
+    ```
+    en:
+      brand:
+        title: ArchivesSpace Public Interface
+        title_link_text: Return to the ArchivesSpace homepage
+        welcome_head: Welcome to ArchivesSpace
+        welcome_message: |
+          <p>Search across our collections, digital materials, and more.</p>
+        welcome_page_title: ArchivesSpace Public Interface
+    ```
+    
+- Restart `archivesspace` container on Docker Desktop for changes to take effect
+
+---
+<!-- header: "![w:80](./small-logo.png) Change PUI and SUI logos" -->
+
+- Update config variables in `config/config.rb`
+
+    ```
+    AppConfig[:pui_branding_img] = '/assets/images/custom-logo.svg'
+    AppConfig[:pui_branding_img_alt_text] = '2026 Code4lib Woskshop - public interface'
+
+    AppConfig[:frontend_branding_img] = '/assets/images/custom-logo-staff.svg'
+    AppConfig[:frontend_branding_img_alt_text] = 'ArchivesSpace - staff interface'
+    ```
+- See also https://docs.archivesspace.org/customization/theming/
+
 
 ---
 <!-- header: "![w:80](./small-logo.png) Let's install some Plugins" -->
@@ -221,8 +253,9 @@ footer {
       - https://docs.archivesspace.org/api/
   - API reference
     - https://archivesspace.github.io/archivesspace/api/#introduction
-  - API Playbook
+  - API Playbook - Introduction to API workshop
     - https://support.atlas-sys.com/hc/en-us/articles/360052217114-The-ArchivesSpace-API-Playbook​
+    - https://www.youtube.com/watch?v=ajaYbtKR1BE&t=234s
 ---
 
 <!-- header: "![w:80](./small-logo.png) Using Postman" -->
