@@ -122,8 +122,9 @@ footer {
 ---
 <!-- header: "![w:80](./small-logo.png) Change UI text with locales" -->
 
+- Let's update the Public UI home page text: http://localhost/
 - Locales are exposed in the `locales` directory
-- Edit `locales/public/en.yml`
+- Edit `locales/public/en.yml` for the english text
 
     ```
     en:
@@ -135,8 +136,8 @@ footer {
           <p>Search across our collections, digital materials, and more.</p>
         welcome_page_title: ArchivesSpace Public Interface
     ```
-    
-- Restart `archivesspace` container on Docker Desktop for changes to take effect
+
+- Restart `archivesspace` container on Docker Desktop
 
 ---
 <!-- header: "![w:80](./small-logo.png) Change PUI and SUI logos" -->
